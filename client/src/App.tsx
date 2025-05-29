@@ -1,10 +1,14 @@
-import { useState } from 'react';
-
+import { Route, Routes } from 'react-router-dom';
+import BoardsList from './features/boards/BoardsList';
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<BoardsList />} />
+      </Routes>
+    </div>
+  );
 }
 
 export default App;
