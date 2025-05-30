@@ -80,6 +80,6 @@ func main() {
 	api.PUT("/tasks/updateStatus/:taskId", updateTaskStatusHandler.UpdateTaskStatus)
 	api.GET("/tasks/:taskId", getTaskByIDHandler.GetTaskByID)
 
-	log.Println("Server is running on :8081")
-	r.Run(":8081")
+	log.Println("Server is running on :8080")
+	r.Run(":8080")
 }
