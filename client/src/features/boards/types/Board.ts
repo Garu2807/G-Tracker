@@ -18,12 +18,12 @@ export type Task = {
   description: string;
   priority: 'High' | 'Medium' | 'Low';
   status: 'Done' | 'InProgress' | 'Backlog';
-  assignee: Assignee;
 };
 
 export type TaskResponse = {
   data: Task[];
 };
+
 export type BoardWithTasks = {
   board: Board;
   tasks: Task[];

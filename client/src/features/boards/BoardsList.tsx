@@ -12,15 +12,32 @@ const getBoards = async (): Promise<{ data: Board[] }> => {
 };
 
 const BoardsList = () => {
+
   const { data: boards, isLoading, error } = useQuery({
     queryKey: ['boards'],
     queryFn: getBoards,
     select: (response) => response.data, // Извлекаем только поле "data"
   });
 
-  if (error instanceof Error) return <div>Ошибка: {error.message}</div>;
+  if (isLoading) {
+    return <div className={styles.container}>Загрузка...</div>;
+  }
 
-  return  <div className={styles.container}>{isLoading ? 'Загрузка...' : boards?.length ? boards.map(board => <BoardItem board={board} key={board.id} />) : <div className={styles.noBoards}>Доски не найдены</div>}</div>;
+  if (error instanceof Error) {
+    return <div className={styles.error}>Ошибка: {error.message}</div>;
+  }
+
+  if (!boards || boards.length === 0) {
+    return <div className={styles.noBoards}>Доски не найдены</div>;
+  }
+
+  return (
+    <div className={styles.container}>
+      {boards.map((board) => (
+          <BoardItem key={board.id}board={board} />
+      ))}
+    </div>
+  );
 };
 
 export default BoardsList;
