@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import BoardsList from './features/boards/BoardsList';
 import BoardPage from './features/boards/BoardPage';
-import NavBar from './features/NavBar/NavBar';
+import NavBar from './features/navbar/NavBar';
 
 function App() {
   return (
