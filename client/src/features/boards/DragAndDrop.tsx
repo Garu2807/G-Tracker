@@ -2,7 +2,7 @@
 import { DragDropContext, Droppable, Draggable, type DropResult } from '@hello-pangea/dnd';
 import { useState, useEffect } from 'react';
 import styles from './Boards.module.css';
-import type { Task } from './types/Board';
+import type { Task } from '../tasks/types/Task';
 
 const STATUSES = ['Backlog', 'InProgress', 'Done'] as const;
 

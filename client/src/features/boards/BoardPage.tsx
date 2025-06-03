@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import styles from './Boards.module.css';
-import type { Task } from './types/Board';
+import type { Task } from '../tasks/types/Task';
 import DragAndDrop from './DragAndDrop';
 
 const getBoardTasks = async (id: string): Promise<{ data: Task[] }> => {

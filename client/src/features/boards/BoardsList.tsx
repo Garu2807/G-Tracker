@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import type { Board } from './types/Board';
 import BoardItem from './BoardItem';
-import styles from './Boards.module.css';
+import styles from './boards.module.css';
 
 const getBoards = async (): Promise<{ data: Board[] }> => {
   const response = await fetch('/api/boards');
