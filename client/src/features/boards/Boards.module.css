@@ -1,0 +1,100 @@
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  width: 100%;
+  background-color: #f9f9f9; /* Используем последний цвет */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.loading {
+  font-size: 18px;
+  color: #888;
+  text-align: center;
+}
+
+.error {
+  font-size: 16px;
+  color: #ff4d4f;
+  text-align: center;
+}
+
+.noBoards {
+  font-size: 16px;
+  color: #555;
+  text-align: center;
+}
+.boardItem {
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #ffffff;
+  transition: box-shadow 0.3s ease;
+  width: 90%;
+}
+
+.boardItem:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.boardItem h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.boardItem p {
+  font-size: 14px;
+  color: #666;
+  margin: 4px 0;
+}
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.tasksList {
+  list-style: none;
+  padding: 0;
+}
+
+.taskItem {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.taskItem h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.taskItem p {
+  font-size: 14px;
+  color: #666;
+}
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  color: #ffffff;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
