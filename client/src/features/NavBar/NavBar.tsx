@@ -5,7 +5,7 @@ const NavBar = () => {
   return (
     <nav className={styles.nav}>
         <NavLink
-        to="/issues"
+        to="/tasks"
         className={({ isActive }) => (isActive ? styles.active : '')}
       >
         Все задачи
